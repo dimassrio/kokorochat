@@ -389,8 +389,8 @@ var PHONE = window.PHONE = function(config) {
     // Prepare Local Media Camera and Mic
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     function getusermedia() {
-        navigator.getUserMedia( mediaconf, function(stream) {
-            console.log(stream);
+        n/*avigator.getUserMedia( mediaconf, function(stream) {
+            
             if (!stream) return unablecb(stream);
             mystream = stream;
             snapshots_setup(stream);
@@ -399,7 +399,9 @@ var PHONE = window.PHONE = function(config) {
         }, function(info) {
             debugcb(info);
             return unablecb(info);
-        } );
+        } );*/
+		onready();
+        subscribe();
     }
 
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
