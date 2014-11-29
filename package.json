@@ -1,0 +1,29 @@
+{
+  "name": "dimassrio-smartlog",
+  "version": "1.0.0",
+  "description": "ilcs, telkom indonesia, joint-venture",
+  "main": "gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dimassrio/smartlog"
+  },
+  "author": "Dimas Satrio - dimassrio",
+  "bugs": {
+    "url": "https://github.com/dimassrio/smartlog/issues"
+  },
+  "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-compress": "~0.5.2",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-copy": "v0.5.0",
+        "grunt-contrib-cssmin": "~0.6.1",
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-sass": "~0.14",
+        "grunt-contrib-uglify": "~0.2.2",
+        "grunt-contrib-watch": "~0.6.0",
+        "grunt-phpunit": "~0.3.0",
+        "node-sass" : "~0.9.0"
+    }
+
+}

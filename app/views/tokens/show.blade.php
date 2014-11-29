@@ -1,0 +1,1 @@
+E:\Development\php\kokorochat\app/views/tokens/show.blade.php
