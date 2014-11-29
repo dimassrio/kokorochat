@@ -4,6 +4,8 @@
 
 $bg-default: #D54635;
 $white: #ffffff;
+$black: #000000;
+$border-default: #878787;
 
 body{
 	background: $bg-default;
@@ -15,10 +17,48 @@ body{
 	max-height: 100%;
 	color: $white;
 	font-family: "Lato";
+	overflow-y: hidden;
+	h1,h2,h3{
+		color: $white;
+		font-family: "Lato";
+		font-style: "bold";
+	}
+	label{
+		color: $white;
+		font-family: "Lato";
+	}
 }
 
-.title-kokoro{
-	font-family: "Lato";
-	font-style: "bold";
-	color: $white;
+.bg-message{
+	min-height: 75%;
+	max-height: 75%;
+	margin-top: 5%;
+	background: $white;
+	overflow: scroll;
+	position: fixed;
+	width: 100%;
+}
+
+.chat-menu{
+	position: fixed;
+	background: $bg-default;
+	padding-top: 1%;
+	min-height: 19%;
+	max-height: 19%;
+	bottom: 0%;
+	width:100%;
+}
+.icon{
+		a{
+			color: $black;
+		}
+	}
+
+.chat-header{
+	top: 0%;
+	min-height: 1%;
+	max-height: 1%;
+	width:100%;
+	position: fixed;	
+	padding-top:1%;
 }

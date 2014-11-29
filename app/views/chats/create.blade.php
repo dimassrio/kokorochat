@@ -3,20 +3,20 @@
 @section('body')
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 col-sm-12 columns">
-            <ul class="incoming-message" id="incoming">
-        
-        </ul>
+        <div class="large-2 medium-2 small-2 text-center columns">
+            <!-- echo picture-->
+        </div>
+        <div class="large-8 medium-10 small-10 text-center end columns">
+            <ul class="incoming-message incoming-message-style" id="incoming">          
+            </ul>
         </div>
     </div>
-
-
     <div class="row">
-        <div class="col-lg-10 col-sm-10 columns">
+        <div class="large-offset-1 large-9 medium-10 small-10 text-center columns">
             <input type="text" id="chat_input" class="form-control">
         </div>
-        <div class="col-lg-2 col-sm-2 columns">
-            <a id="btn-send" href="#" class="btn btn-block btn-sm btn-info">SEND</a>
+        <div class="large-2 medium-2 small-2 text-center columns">
+            <a id="btn-send" href="#" class="button">SEND</a>
         </div>
     </div>
 </div>

@@ -1,22 +1,67 @@
 @extends('_layout.chat')
 
 @section('body')
-<div class="row">
-	<div class="col-lg-12 col-sm-12 columns">
-		<ul class="incoming-message" id="incoming">
-	
-	</ul>
-	</div>
-</div>
+<div class="container">
+    <div class="chat-header">
+        <div class="row icon">
+            <div class="large-offset-10 medium-offset-10 small-offset-10 large-2 medium-2 small-2 columns">
+                <a href=""><i class="fa fa-gear fa-3x"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-message">
+        <div class="row">
+            <div class="large-2 medium-2 small-2 text-center columns">
+                <!-- echo picture-->
+            </div>
+            <div class="large-8 medium-10 small-10 text-center end columns">
+                <ul class="incoming-message" id="incoming">          
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="chat-menu">
+        <div class="row">
+            <div class="large-offset-1 medium-offset-11 large-10 medium-10 small-12 text-center columns">
+                <div class="row collapse">
+                  <div class="large-10 medium-10 small-10 columns">
+                    <input type="text" id="chat_input" class="form-control">
+                  </div>
+                  <div class="large-2 medium-2 small-2 text-center columns">
+                    <a href="#" class="button postfix">Send</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row icon">
+            <a href="">
+                <div class="large-offset-1 medium-offset-1 small-offset-1 large-2 medium-2 small-2 columns">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-smile-o fa-3x"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-picture-o fa-3x"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-microphone fa-3x"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns end">
+                    <i class="fa fa-send-o fa-3x"></i>
+                </div>
+            </a>       
+        </div>
 
-
-<div class="row">
-	<div class="col-lg-10 col-sm-10 columns">
-		<input type="text" id="chat_input" class="form-control">
-	</div>
-	<div class="col-lg-2 col-sm-2 columns">
-		<a id="btn-send" href="#" class="btn btn-block btn-sm btn-info">SEND</a>
-	</div>
+    </div>
 </div>
 
 @stop

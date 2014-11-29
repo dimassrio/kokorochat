@@ -21,5 +21,6 @@
 		<!-- CSS
 		================================================== -->
         <link rel="stylesheet" href="{{asset('assets/style.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}">
 </head>
 <body>

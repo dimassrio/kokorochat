@@ -1,51 +1,36 @@
-// Core variables and mixins
-@import "vendor/bootstrap-sass/lib/variables";
-@import "vendor/bootstrap-sass/lib/mixins";
+  @import "vendor/foundation/scss/foundation/components/accordion";
+  @import "vendor/foundation/scss/foundation/components/alert-boxes";
+  @import "vendor/foundation/scss/foundation/components/block-grid";
+  @import "vendor/foundation/scss/foundation/components/breadcrumbs";
+  @import "vendor/foundation/scss/foundation/components/button-groups";
+  @import "vendor/foundation/scss/foundation/components/buttons";
+  @import "vendor/foundation/scss/foundation/components/clearing";
+  @import "vendor/foundation/scss/foundation/components/dropdown";
+  @import "vendor/foundation/scss/foundation/components/dropdown-buttons";
+  @import "vendor/foundation/scss/foundation/components/flex-video";
+  @import "vendor/foundation/scss/foundation/components/forms";
+  @import "vendor/foundation/scss/foundation/components/grid";
+  @import "vendor/foundation/scss/foundation/components/inline-lists";
+  @import "vendor/foundation/scss/foundation/components/joyride";
+  @import "vendor/foundation/scss/foundation/components/keystrokes";
+  @import "vendor/foundation/scss/foundation/components/labels";
+  @import "vendor/foundation/scss/foundation/components/magellan";
+  @import "vendor/foundation/scss/foundation/components/orbit";
+  @import "vendor/foundation/scss/foundation/components/pagination";
+  @import "vendor/foundation/scss/foundation/components/panels";
+  @import "vendor/foundation/scss/foundation/components/pricing-tables";
+  @import "vendor/foundation/scss/foundation/components/progress-bars";
+  @import "vendor/foundation/scss/foundation/components/reveal";
+  @import "vendor/foundation/scss/foundation/components/side-nav";
+  @import "vendor/foundation/scss/foundation/components/split-buttons";
+  @import "vendor/foundation/scss/foundation/components/sub-nav";
+  @import "vendor/foundation/scss/foundation/components/switch";
+  @import "vendor/foundation/scss/foundation/components/tables";
+  @import "vendor/foundation/scss/foundation/components/tabs";
+  @import "vendor/foundation/scss/foundation/components/thumbs";
+  @import "vendor/foundation/scss/foundation/components/tooltips";
+  @import "vendor/foundation/scss/foundation/components/offcanvas";
+  @import "vendor/foundation/scss/foundation/components/visibility";
 
-// Reset
-@import "vendor/bootstrap-sass/lib/normalize";
-@import "vendor/bootstrap-sass/lib/print";
-
-// Core CSS
-@import "vendor/bootstrap-sass/lib/scaffolding";
-@import "vendor/bootstrap-sass/lib/type";
-@import "vendor/bootstrap-sass/lib/code";
-@import "vendor/bootstrap-sass/lib/grid";
-@import "vendor/bootstrap-sass/lib/tables";
-@import "vendor/bootstrap-sass/lib/forms";
-@import "vendor/bootstrap-sass/lib/buttons";
-
-// Components
-@import "vendor/bootstrap-sass/lib/component-animations";
-@import "vendor/bootstrap-sass/lib/glyphicons";
-@import "vendor/bootstrap-sass/lib/dropdowns";
-@import "vendor/bootstrap-sass/lib/button-groups";
-@import "vendor/bootstrap-sass/lib/input-groups";
-@import "vendor/bootstrap-sass/lib/navs";
-@import "vendor/bootstrap-sass/lib/navbar";
-@import "vendor/bootstrap-sass/lib/breadcrumbs";
-@import "vendor/bootstrap-sass/lib/pagination";
-@import "vendor/bootstrap-sass/lib/pager";
-@import "vendor/bootstrap-sass/lib/labels";
-@import "vendor/bootstrap-sass/lib/badges";
-@import "vendor/bootstrap-sass/lib/jumbotron";
-@import "vendor/bootstrap-sass/lib/thumbnails";
-@import "vendor/bootstrap-sass/lib/alerts";
-@import "vendor/bootstrap-sass/lib/progress-bars";
-@import "vendor/bootstrap-sass/lib/media";
-@import "vendor/bootstrap-sass/lib/list-group";
-@import "vendor/bootstrap-sass/lib/panels";
-@import "vendor/bootstrap-sass/lib/wells";
-@import "vendor/bootstrap-sass/lib/close";
-
-// Components w/ JavaScript
-@import "vendor/bootstrap-sass/lib/modals";
-@import "vendor/bootstrap-sass/lib/tooltip";
-@import "vendor/bootstrap-sass/lib/popovers";
-@import "vendor/bootstrap-sass/lib/carousel";
-
-// Utility classes
-@import "vendor/bootstrap-sass/lib/utilities";
-@import "vendor/bootstrap-sass/lib/responsive-utilities";
 
 @import "css/app.scss";
