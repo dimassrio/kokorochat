@@ -17,5 +17,7 @@ Route::get('get/username/by/{phone?}', 'UsersController@getUsernameByPhone');
 Route::get('send/message/{message?}', 'ChatsController@sendMessage');
 Route::get('receive/message/{channel}', 'ChatsController@receiveMessage');
 
-Route::get('users/1/chat','ChatsController@index');
-Route::get('users/2/chat', 'ChatsController@create');
+Route::get('users/{id}/chat','ChatsController@index');
+Route::get('dashboard','SystemsController@dashboard');
+Route::get('login','UsersController@login');
+Route::post('login','UsersController@login');

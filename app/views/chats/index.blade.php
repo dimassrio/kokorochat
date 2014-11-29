@@ -24,13 +24,14 @@
 @section('js')
 {{ HTML::script('assets/vendor/jquery/dist/jquery.min.js') }}
 <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+
 {{ HTML::script('assets/js/webrtc.js') }}
 <script>(function(){
     // ~Warning~ You must get your own API Keys for non-demo purposes.
     // ~Warning~ Get your PubNub API Keys: http://www.pubnub.com/get-started/
     // The phone *number* can by any string value
     var phone = PHONE({
-        number        : '1234',
+        number        : '{{$source}}',
         publish_key   : 'pub-c-37979623-3ad7-422d-86c5-b0680959e6d5',
         subscribe_key : 'sub-c-8419106c-778d-11e4-82cc-02ee2ddab7fe',
         ssl           : true
@@ -42,7 +43,7 @@
         // Dial a Number and get the Call Session
         // For simplicity the phone number is the same for both caller/receiver.
         // you should use different phone numbers for each user.
-        var session = phone.dial('5678');
+        var session = phone.dial('{{$destination}}');
 
     });
 
@@ -56,15 +57,32 @@
     function updateList(session){
     	 session.connected(function(session){
             phone.message(function( session, message ) {
-            	var result = "<li>"+message.text+"</li>";
+                console.log(message);
+                if(message.sender == phone.number){
+            	   var result = "<li class=\"text-left\">"+message.text+"</li>";
+                }else{
+                    var result = "<li class=\"text-right\">"+message.text+"</li>";
+                }
             	$(".incoming-message").append(result);
 			} );
         });
     }
 
     $('#btn-send').click(function(){
-    	phone.send({text : $("#chat_input").val()});
-    	
+       sendMessage();
+    });
+
+    function sendMessage(){
+         var message =  $("#chat_input").val();
+        phone.send({sender: "{{$source}}" ,text : message});
+        var result = "<li>"+message+"</li>";
+        $(".incoming-message").append(result);
+        $("#chat_input").val("");
+    }
+    $("#chat_input").keyup(function(event){
+        if(event.keyCode == 13){
+            sendMessage();
+        }
     });
 
 })();</script>

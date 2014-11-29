@@ -97,4 +97,17 @@ class UsersController extends \BaseController {
 			return false;
 		}
 	}
+
+	public function login(){
+		if(Input::has('username')){
+			$username = Input::get('username');
+			$password = Input::get('password');
+
+			if (Auth::attempt(array('username' => $username, 'password' => $password))){
+				return Redirect::intended('dashboard');
+			}
+		}else{
+			return View::make('users.login');
+		}
+	}
 }

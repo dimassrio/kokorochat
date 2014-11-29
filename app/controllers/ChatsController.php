@@ -8,9 +8,11 @@ class ChatsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($id)
 	{
-		return View::make('chats.index');
+		$data['source'] = Auth::user()->id;
+		$data['destination'] = $id;
+		return View::make('chats.index', $data);
 	}
 
 	/**
@@ -42,9 +44,9 @@ class ChatsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-		//
+		return View::make('chats.show');
 	}
 
 	/**
@@ -54,9 +56,9 @@ class ChatsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
-		//
+		return View::make('chats.edit');
 	}
 
 	/**

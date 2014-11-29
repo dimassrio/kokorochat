@@ -13,6 +13,11 @@ class SystemsController extends \BaseController {
 		return View::make('systems.index');
 	}
 
+	public function dashboard(){
+		$user = User::whereNotIn('id', array(Auth::user()->id))->get();
+		$data['user'] = $user;
+		return View::make('systems.dashboard', $data);
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /systems/create

@@ -176,6 +176,7 @@ var PHONE = window.PHONE = function(config) {
             // Add Local Media Streams Audio Video Mic Camera
             talk.pc.addStream(mystream);
 
+
             // Notify of Call Status
             update_conversation( talk, 'connecting' );
 
@@ -389,6 +390,7 @@ var PHONE = window.PHONE = function(config) {
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     function getusermedia() {
         navigator.getUserMedia( mediaconf, function(stream) {
+            console.log(stream);
             if (!stream) return unablecb(stream);
             mystream = stream;
             snapshots_setup(stream);
@@ -527,7 +529,8 @@ var PHONE = window.PHONE = function(config) {
     // Main - Request Camera and Mic
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     getusermedia()
-
+    //onready();
+    //subscribe();
     return PHONE;
 };
 

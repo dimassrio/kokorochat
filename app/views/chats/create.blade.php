@@ -2,21 +2,21 @@
 
 @section('body')
 <div class="row">
-	<div class="col-lg-12 col-sm-12 columns">
-		<ul class="incoming-message" id="incoming">
-	
-		</ul>
-	</div>
+    <div class="col-lg-12 col-sm-12 columns">
+        <ul class="incoming-message" id="incoming">
+    
+    </ul>
+    </div>
 </div>
 
 
 <div class="row">
-	<div class="col-lg-10 col-sm-10 columns">
-		<input type="text" id="chat_input" class="form-control">
-	</div>
-	<div class="col-lg-2 col-sm-2 columns">
-		<a href="#" class="btn btn-block btn-sm btn-info">SEND</a>
-	</div>
+    <div class="col-lg-10 col-sm-10 columns">
+        <input type="text" id="chat_input" class="form-control">
+    </div>
+    <div class="col-lg-2 col-sm-2 columns">
+        <a id="btn-send" href="#" class="btn btn-block btn-sm btn-info">SEND</a>
+    </div>
 </div>
 
 @stop
@@ -24,6 +24,7 @@
 @section('js')
 {{ HTML::script('assets/vendor/jquery/dist/jquery.min.js') }}
 <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+
 {{ HTML::script('assets/js/webrtc.js') }}
 <script>(function(){
     // ~Warning~ You must get your own API Keys for non-demo purposes.
@@ -42,7 +43,7 @@
         // Dial a Number and get the Call Session
         // For simplicity the phone number is the same for both caller/receiver.
         // you should use different phone numbers for each user.
-        //var session = phone.dial('1234');
+        var session = phone.dial('1234');
 
     });
 
@@ -50,17 +51,25 @@
     phone.receive(function(session){
 
         // Display Your Friend's Live Video
-        updateList(session);
+       updateList(session);
     });
 
     function updateList(session){
-    	 session.connected(function(session){
+         session.connected(function(session){
             phone.message(function( session, message ) {
-            	var result = "<li>"+message.text+"</li>";
-            	$(".incoming-message").append(result);
-			} );
+                var result = "<li class=\"text-center\">"+message.text+"</li>";
+                $(".incoming-message").append(result);
+            } );
         });
     }
+
+    $('#btn-send').click(function(){
+        var message =  $("#chat_input").val();
+        phone.send({text : message});
+        var result = "<li>"+message+"</li>";
+        $(".incoming-message").append(result);
+        $("#chat_input").val("");       
+    });
 
 })();</script>
 @stop
