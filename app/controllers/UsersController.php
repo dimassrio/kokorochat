@@ -104,7 +104,7 @@ class UsersController extends \BaseController {
 			$password = Input::get('password');
 
 			if (Auth::attempt(array('username' => $username, 'password' => $password))){
-				if($username == 1){
+				if($username == "admin"){
 				return Redirect::intended('users/2/chat');
 				}else{
 				return Redirect::intended('users/1/chat');
