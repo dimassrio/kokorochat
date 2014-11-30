@@ -1,25 +1,63 @@
 @extends('_layout.chat')
 
 @section('body')
-<div class="row">
-	<div class="col-lg-12 col-sm-12 columns">
-		<ul class="incoming-message" id="incoming">
-	
-	</ul>
-	</div>
-</div>
+<div class="container">
+    
+    <div class="bg-message">
+        <div class="row">
+            <div class="large-2 medium-2 small-2 text-center columns">
+                <!-- echo picture-->
+            </div>
+            <div class="large-8 medium-10 small-10 end columns">
+                <ul class="incoming-message" id="incoming-message">
 
-
-<div class="row">
-    <div class="col-lg-2 col-sm-2">
-        <input type="file" id="upload-btn">
+                </ul>
+            </div>
+        </div>
     </div>
-	<div class="col-lg-8 col-sm-8 columns">
-		<input type="text" id="chat_input" class="form-control">
-	</div>
-	<div class="col-lg-2 col-sm-2 columns">
-		<a id="btn-send" href="#" class="btn btn-block btn-sm btn-info">SEND</a>
-	</div>
+
+    <div class="form-send">
+        <div class="row">
+            <div class="large-offset-1 medium-offset-11 large-10 medium-10 small-12 text-center">
+                <div class="row collapse">
+                  <div class="large-10 medium-10 small-10 columns">
+                    <input type="text" id="chat_input" class="form-control" placeholder="text message">
+                  </div>
+                  <div class="large-2 medium-2 small-2 text-center columns">
+                    <a href="#" class="button red postfix" id="btn-send">Send</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-menu">
+        <div class="row icon">
+            <a href="">
+                <div class="large-offset-1 medium-offset-1 small-offset-1 large-2 medium-2 small-2 columns">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-smile-o "></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-picture-o "></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns">
+                    <i class="fa fa-microphone "></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="large-2 medium-2 small-2 columns end">
+                    <i class="fa fa-send-o "></i>
+                </div>
+            </a>       
+        </div>
+    </div>
 </div>
 
 @stop

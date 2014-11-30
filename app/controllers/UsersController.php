@@ -104,7 +104,12 @@ class UsersController extends \BaseController {
 			$password = Input::get('password');
 
 			if (Auth::attempt(array('username' => $username, 'password' => $password))){
-				return Redirect::intended('dashboard');
+				if($username == 1){
+				return Redirect::intended('users/2/chat');
+				}else{
+				return Redirect::intended('users/1/chat');
+
+				}
 			}
 		}else{
 			return View::make('users.login');

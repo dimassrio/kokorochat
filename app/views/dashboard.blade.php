@@ -1,1 +1,5 @@
-E:\Development\php\kokorochat\app/views/dashboard.blade.php
+@include('layout.header-chat')
+@foreach ($users as $user)
+	
+@endforeach
+@include('layout.footer')
