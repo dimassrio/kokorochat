@@ -11,7 +11,10 @@
 
 
 <div class="row">
-	<div class="col-lg-10 col-sm-10 columns">
+    <div class="col-lg-2 col-sm-2">
+        <input type="file" id="upload-btn">
+    </div>
+	<div class="col-lg-8 col-sm-8 columns">
 		<input type="text" id="chat_input" class="form-control">
 	</div>
 	<div class="col-lg-2 col-sm-2 columns">
@@ -58,10 +61,10 @@
     	 session.connected(function(session){
             phone.message(function( session, message ) {
                 console.log(message);
-                if(message.sender == phone.number){
-            	   var result = "<li class=\"text-left\">"+message.text+"</li>";
-                }else{
+                if(message.type == "text"){
                     var result = "<li class=\"text-right\">"+message.text+"</li>";
+                }else if(message.type == "image"){
+                     var result = "<li class=\"text-right\"><img src=\""+message.text+"\"></li>";
                 }
             	$(".incoming-message").append(result);
 			} );
@@ -69,21 +72,41 @@
     }
 
     $('#btn-send').click(function(){
-       sendMessage();
+        var message =  $("#chat_input").val();
+        sendMessage(message, "text");
     });
 
-    function sendMessage(){
-         var message =  $("#chat_input").val();
-        phone.send({sender: "{{$source}}" ,text : message});
+    function sendMessage(message, type){
+        phone.send({sender: "{{$source}}" ,text : message, type: type});
         var result = "<li>"+message+"</li>";
         $(".incoming-message").append(result);
         $("#chat_input").val("");
     }
     $("#chat_input").keyup(function(event){
         if(event.keyCode == 13){
-            sendMessage();
+            var message =  $("#chat_input").val();
+            sendMessage(message, "text");
         }
     });
 
+    $("#upload-btn").change(function(){
+        readImage(this);
+    });
+
+    function readImage(input){
+        if ( input.files && input.files[0] ) {
+        var FR= new FileReader();
+        FR.onload = function(e) {
+            console.log(e.target.result);
+            var result = "<li><img src=\""+e.target.result+"\"></li>";
+            $(".incoming-message").append(result);
+            sendMessage(e.target.result, "image");
+             //$('#img').attr( "src", e.target.result );
+             //$('#base').text( e.target.result );
+        };       
+        FR.readAsDataURL( input.files[0] );
+    }
+    }
+    
 })();</script>
 @stop
