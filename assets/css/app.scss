@@ -7,9 +7,6 @@ $white: #ffffff;
 $black: #000000;
 $border-default: #878787;
 
-body{
-	background: $bg-default;
-}
 
 .container{
 	background: $bg-default;
@@ -32,7 +29,7 @@ body{
 .bg-message{
 	min-height: 75%;
 	max-height: 75%;
-	margin-top: 5%;
+	margin-top: 1%;
 	background: $white;
 	overflow: scroll;
 	position: fixed;
@@ -43,16 +40,21 @@ body{
 	position: fixed;
 	background: $bg-default;
 	padding-top: 1%;
-	min-height: 19%;
-	max-height: 19%;
+	height: 57px;
 	bottom: 0%;
 	width:100%;
+	line-height: 57px;
 }
 .icon{
 		a{
-			color: $black;
+			color: #fff;
+			
 		}
 	}
+
+.row.icon i a{
+	font-size: 18px !important;
+}
 
 .chat-header{
 	top: 0%;
@@ -61,4 +63,54 @@ body{
 	width:100%;
 	position: fixed;	
 	padding-top:1%;
+}
+
+.icon-bar a i{
+	font-size: 30px;
+	color: #fff;
+}
+
+.head p{
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 42px;
+}
+
+.head{
+	border-bottom: 2px solid #c94128;
+	height: 42px;
+	background: #d64635;
+}
+
+.icon-bar a.active{
+	border-bottom: 5px solid #fff;
+	padding-bottom: 15px;
+}
+
+.icon-bar{
+	line-height: 56px;
+}
+
+.menu{
+	height: 56px;
+	background: #d64635;
+}
+
+.form-send{
+	bottom: 6%;
+width: 95%;
+position: fixed;
+border-top: 1px solid #cfcfcf;
+}
+
+a.button.red.postfix{
+	background: #c94128 !important;
+	color: #fff;
+}
+
+input[type=text], input[type=password], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=email], input[type=number], input[type=search], input[type=tel], input[type=time], input[type=url], textarea{
+	border:1px solid #fff !important;
+	-webkit-box-shadow:none;
 }

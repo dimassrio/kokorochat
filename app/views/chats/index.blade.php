@@ -2,13 +2,7 @@
 
 @section('body')
 <div class="container">
-    <div class="chat-header">
-        <div class="row icon">
-            <div class="large-offset-10 medium-offset-10 small-offset-10 large-2 medium-2 small-2 columns">
-                <a href=""><i class="fa fa-gear fa-3x"></i></a>
-            </div>
-        </div>
-    </div>
+    
     <div class="bg-message">
         <div class="row">
             <div class="large-2 medium-2 small-2 text-center columns">
@@ -20,43 +14,45 @@
             </div>
         </div>
     </div>
-    <div class="chat-menu">
+
+    <div class="form-send">
         <div class="row">
-            <div class="large-offset-1 medium-offset-11 large-10 medium-10 small-12 text-center columns">
+            <div class="large-offset-1 medium-offset-11 large-10 medium-10 small-12 text-center">
                 <div class="row collapse">
                   <div class="large-10 medium-10 small-10 columns">
-                    <input type="text" id="chat_input" class="form-control">
+                    <input type="text" id="chat_input" class="form-control" placeholder="text message">
                   </div>
                   <div class="large-2 medium-2 small-2 text-center columns">
-                    <a href="#" class="button postfix">Send</a>
+                    <a href="#" class="button red postfix">Send</a>
                   </div>
                 </div>
             </div>
         </div>
+        <div class="chat-menu">
         <div class="row icon">
             <a href="">
                 <div class="large-offset-1 medium-offset-1 small-offset-1 large-2 medium-2 small-2 columns">
-                    <i class="fa fa-plus fa-3x"></i>
+                    <i class="fa fa-plus"></i>
                 </div>
             </a>
             <a href="">
                 <div class="large-2 medium-2 small-2 columns">
-                    <i class="fa fa-smile-o fa-3x"></i>
+                    <i class="fa fa-smile-o "></i>
                 </div>
             </a>
             <a href="">
                 <div class="large-2 medium-2 small-2 columns">
-                    <i class="fa fa-picture-o fa-3x"></i>
+                    <i class="fa fa-picture-o "></i>
                 </div>
             </a>
             <a href="">
                 <div class="large-2 medium-2 small-2 columns">
-                    <i class="fa fa-microphone fa-3x"></i>
+                    <i class="fa fa-microphone "></i>
                 </div>
             </a>
             <a href="">
                 <div class="large-2 medium-2 small-2 columns end">
-                    <i class="fa fa-send-o fa-3x"></i>
+                    <i class="fa fa-send-o "></i>
                 </div>
             </a>       
         </div>
