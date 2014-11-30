@@ -53,7 +53,7 @@
             </a>
             <a href="">
                 <div class="large-2 medium-2 small-2 columns end">
-                    <i class="fa fa-send-o "></i>
+                    <i class="fa fa-envelope-o "></i>!
                 </div>
             </a>       
         </div>
