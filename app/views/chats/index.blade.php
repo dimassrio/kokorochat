@@ -8,8 +8,8 @@
             <div class="large-2 medium-2 small-2 text-center columns">
                 <!-- echo picture-->
             </div>
-            <div class="large-8 medium-10 small-10 end columns">
-                <ul class="incoming-message" id="incoming-message">
+            <div class="large-10 medium-10 small-12 end columns">
+                <ul class="incoming-message" id="incoming-message" style="margin-left: 0px">
 
                 </ul>
             </div>
@@ -18,13 +18,13 @@
 
     <div class="form-send">
         <div class="row">
-            <div class="large-offset-1 medium-offset-11 large-10 medium-10 small-12 text-center">
+            <div class="large-10 medium-12 small-12 text-center">
                 <div class="row collapse">
                   <div class="large-10 medium-10 small-10 columns">
-                    <input type="text" id="chat_input" class="form-control" placeholder="text message">
+                    <input type="text" style="margin:0px"  id="chat_input" class="form-control" placeholder="text message">
                   </div>
                   <div class="large-2 medium-2 small-2 text-center columns">
-                    <a href="#" class="button red postfix" id="btn-send">Send</a>
+                    <a href="#" class="button red postfix" style="margin:0px" id="btn-send">Send</a>
                   </div>
                 </div>
             </div>

@@ -51,9 +51,9 @@ li{
 }
 
 .chat-menu{
-	position: fixed;
+/*	position: fixed;*/
 	background: $bg-default;
-	padding-top: 1%;
+/*	padding-top: 1%;*/
 	height: 57px;
 	bottom: 0%;
 	width:100%;
@@ -113,8 +113,8 @@ li{
 }
 
 .form-send{
-	bottom: 6%;
-width: 95%;
+	bottom: 0;
+width: 100%;
 position: fixed;
 border-top: 1px solid #cfcfcf;
 }
