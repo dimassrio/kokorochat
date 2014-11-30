@@ -100,7 +100,8 @@
             phone.message(function( session, message ) {
                 console.log(message);
                 if(message.type == "text"){
-                    var result = "<li class=\"text-right\">"+message.text+"</li>";
+
+                    var result = "<p>sadsadsad</p> <br><li class=\"text-right\">"+message.text+"</li>";
                 }else if(message.type == "image"){
                      var result = "<li class=\"text-right\"><img src=\""+message.text+"\"></li>";
                 }
@@ -116,7 +117,7 @@
 
     function sendMessage(message, type){
         phone.send({sender: "{{$source}}" ,text : message, type: type});
-        var result = "<li>"+message+"</li>";
+        var result = "<p>Kun Yahya Mustofa</p><li>"+message+"</li>";
         $(".incoming-message").append(result);
         $("#chat_input").val("");
     }

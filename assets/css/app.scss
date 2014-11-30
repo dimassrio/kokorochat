@@ -41,6 +41,14 @@ body .login{
 	width: 100%;
 }
 
+li{
+	color: #111;
+	list-style: none;
+	border: 1px solid #ededed;
+	padding: 5px;
+	
+}
+
 .chat-menu{
 	position: fixed;
 	background: $bg-default;
@@ -118,4 +126,10 @@ a.button.red.postfix{
 input[type=text], input[type=password], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=email], input[type=number], input[type=search], input[type=tel], input[type=time], input[type=url], textarea{
 	border:1px solid #fff !important;
 	-webkit-box-shadow:none;
+}
+
+.incoming-message p{
+	color: #a6a6a6;
+	margin-top: 5%;
+	margin-bottom: 5px;
 }
